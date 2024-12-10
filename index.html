@@ -6,36 +6,70 @@
   <title>Web Page Banner</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
-   html,
-body {
-margin: 07;
-}
-•banner{
-   background: I#c800ff;
-  }
-  .banner_content {
-padding: 16px;
-max-width: 500px;
-margin: 0 auto;
-text-align: center;
-  }
-  .ex2{
-    font-size: 40px;
-  }
-
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    .banner {
+      background: #ff0000;
+      color: rgb(0, 0, 0);
+    }
+    .banner_content {
+      padding: 16px;
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+    .banner_text h1 {
+      font-size: 40px; /* Responsive font size */
+      margin: 0;
+    }
+    .banner_close {
+      background: none;
+      border: none;
+      color: rgb(0, 0, 0);
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      cursor: pointer;
+    }
+    .banner_close .material-icons {
+      font-size: 20px;
+    }
+    .banner_close:hover {
+      color: #696969; /* Subtle hover effect */
+    }
   </style>
 </head>
 <body>
   <div class="banner">
     <div class="banner_content">
       <div class="banner_text">
-        <h1 class="ex2">WELCOME TO THE GAGAN CAKE'S</h1>
+        <h1>WELCOME TO GAGAN CAKE'S</h1>
       </div>
-      <button class="banner_close" type="button">
+      <button class="banner_close" type="button" aria-label="Close banner">
         <span class="material-icons">close</span>
       </button>
     </div>
   </div>
+  <script>
+    document.querySelector(".banner_close").addEventListener("click", function () {
+      this.closest(".banner").style.display = "none";
+    });
+  </script>
+  
+</body>
+<body>
+<img src="Untitled.jpeg" sizes="40px">
+
+
+
+
 </body>
 </html>
+
+
 
